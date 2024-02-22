@@ -1,0 +1,33 @@
+{
+    "categories": [
+      {
+        "name": "Category 1",
+        "image": "../assets/images/soup.jpg",
+        "dishes": [
+          {
+            "name": "Dish 1",
+            "description": "Description of Dish 1"
+          },
+          {
+            "name": "Dish 2",
+            "description": "Description of Dish 2"
+          }
+        ]
+      },
+      {
+        "name": "Category 2",
+        "image": "./assets/images/category2.jpg",
+        "dishes": [
+          {
+            "name": "Dish 3",
+            "description": "Description of Dish 3"
+          },
+          {
+            "name": "Dish 4",
+            "description": "Description of Dish 4"
+          }
+        ]
+      }
+    ]
+  }
+  
