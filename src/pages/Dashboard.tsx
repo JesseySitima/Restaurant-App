@@ -1,9 +1,73 @@
 import { IonApp, IonButton, IonContent, IonButtons, IonHeader, IonIcon, IonTitle, IonToolbar, IonSearchbar, IonText, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from "@ionic/react";
 import React from "react";
 import { personCircleOutline } from "ionicons/icons";
-import
+import starterImage from '../assets/images/soup.jpg';
+import mainsImage from '../assets/images/batala.jpg';
+import desertImage from '../assets/images/cake2.png';
+import specialImage from '../assets/images/mbalanga.jpg';
 
 const Dashboard: React.FC = () => {
+
+    const categories = [
+        {
+            "name": "Starters",
+            "image": starterImage,
+            "dishes": [
+                {
+                    "name": "Dish 1",
+                    "description": "Description of Dish 1"
+                },
+                {
+                    "name": "Dish 2",
+                    "description": "Description of Dish 2"
+                }
+            ]
+        },
+        {
+            "name": "Mains",
+            "image": mainsImage,
+            "dishes": [
+                {
+                    "name": "Dish 3",
+                    "description": "Description of Dish 3"
+                },
+                {
+                    "name": "Dish 4",
+                    "description": "Description of Dish 4"
+                }
+            ]
+        },
+        {
+            "name": "Dessert",
+            "image": desertImage,
+            "dishes": [
+                {
+                    "name": "Dish 3",
+                    "description": "Description of Dish 3"
+                },
+                {
+                    "name": "Dish 4",
+                    "description": "Description of Dish 4"
+                }
+            ]
+        },
+        {
+            "name": "Specials",
+            "image": specialImage,
+            "dishes": [
+                {
+                    "name": "Dish 3",
+                    "description": "Description of Dish 3"
+                },
+                {
+                    "name": "Dish 4",
+                    "description": "Description of Dish 4"
+                }
+            ]
+        }
+    ];
+
+
     return(
          <IonApp>
             <IonHeader>
@@ -27,22 +91,20 @@ const Dashboard: React.FC = () => {
                     </IonCol>
                 </IonRow>
                 <IonRow>
-                    {[1, 2, 3, 4, 5].map((item) => (
-                        <IonCol size="12" key={item}>
+                    {categories.map((category, index) => (
+                        <IonCol size="12" key={index}>
                             <IonCard button>
                                 <IonCardContent>
                                     <IonGrid>
                                         <IonRow>
                                             <IonCol size="3">
-                                                <img src={`https://picsum.photos/seed/${item}/100/100`} alt="Placeholder" style={{ borderRadius: '50%' }}/>
+                                                <img src={category.image} alt="Placeholder" style={{ borderRadius: '50%', }}/>
                                             </IonCol>
                                             <IonCol size="9">
                                                 <IonText>
-                                                    <h2>Title {item}</h2>
+                                                    <h2>{category.name}</h2>
                                                 </IonText>
-                                                <p>
-                                                    This is a description for card {item}. You can add any content here.
-                                                </p>
+                                              
                                             </IonCol>
                                         </IonRow>
                                     </IonGrid>
